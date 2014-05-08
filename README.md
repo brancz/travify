@@ -13,3 +13,13 @@ For use with heroku:
 	heroku addons:add rabbitmq-bigwig
 
 Then point the travis hook to `appname.herokuapp.com/webhook/travis`
+
+For the client you will need to have libnotify-dev and the corresponding rubygem
+installed.
+
+	sudo apt-get install libnotify-dev
+	gem install libnotify
+
+Then you can start the client.
+
+	ruby -rubygems receive.rb
